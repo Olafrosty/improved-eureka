@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<!--header-->
+<header>
+    <h1>OLATECH</h1>
+    <p>We are a software development company that specializes in creating innovative solutions for businesses of all sizes. Our team of experienced developers is dedicated to delivering high-quality software that meets the unique needs of our clients.</p>
+</header>
+    <h2>welcome to olatech </h2>
+    <p>Transform your business with our cutting-edge software development services.</p>
+    <!--navigation-->
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>   
+        </ul>
+    </nav>
+    <!--main content-->
+<main>
+    <!--hero section-->
+    <section id="hero">
+        <h2>Innovative Software Solutions</h2>
+        <p>Transform your business with our cutting-edge software development services.</p>
+    </section>
+    <!--section-->
+    <section id="services">
+        <h2>my Services</h2>
+        <ul>
+            <li>Custom Software Development</li>
+            <li>Mobile App Development</li>
+            <li>Web Development</li>
+            <li>Cloud Solutions</li>
+        </ul>
+    </section>
+    <!--skills using progress bars-->
+    <section id="skills">
+        <h2>my Skills</h2>
+        <ul>
+            <li>JavaScript: <progress value="80" max="100"></progress></li>
+            <li>Python: <progress value="70" max="100"></progress></li>
+            <li>Java: <progress value="60" max="100"></progress></li>
+            <li>React: <progress value="90" max="100"></progress></li>
+        </ul>
+    </section>
+    <!--testimonials with blockquotes-->
+    <section id="testimonials">
+        <h2>What Our Clients Say</h2>
+        <blockquote>
+            <p>"OLATECH delivered an exceptional product that exceeded our expectations."</p>
+            <cite>- John Doe, CEO of XYZ Corp</cite>
+        </blockquote>
+    </section>
+    <!--blog posts linking to blog post1.html-->
+    <section id="blog">
+        <h2>Latest Blog Posts</h2>
+        <ul>
+            <li><a href="blog/post1.html">How to Choose the Right Software Development Company</a></li>
+            <li><a href="blog/post2.html">The Benefits of Custom Software Development</a></li>
+            <li><a href="blog/post3.html">Top Trends in Mobile App Development</a></li>
+        </ul>
+    </section>
+    <!--about linking to about.html-->
+    <section id="about">
+        <h2>About Us</h2>
+        <p>Learn more about OLATECH and our commitment to delivering exceptional software solutions.</p>
+        <a href="about.html">Read More</a>
+    </section>
+    <!--projects linking to projects.html-->
+    <section id="projects">
+        <h2>Our Projects</h2>
+        <p>Discover some of the innovative projects we've worked on for our clients.</p>
+        <a href="projects.html">View Projects</a>
+    </section>
+    <!--contact linking to contact.html-->
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>Have questions or want to get in touch? Fill out the form below and we'll get back to you as soon as possible.</p>
+        <a href="contact.html">Contact Us</a>
+    </section>
+
+</main>
+</header>
+<header>
+<!--intermedia integration-->
+
+<section id="media">
+    <h2>Featured Video</h2>
+    <p>Check out our latest video showcasing our software development process and client success stories.</p>
+    <!--embedded youtube video-->
+        <iframe width="400" height="225" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </section>
+    <!--local videos with control-->
+    <h2>select video from local storage</h2>
+    <label for="videoInput">Upload Video:</label>
+    <input type="file" id="videoInput" accept="video/*" title="Select a video file" placeholder="Choose video">
+    <video id="videoPlayer" width="300" height="165" controls></video>
+    <script>
+        const videoInput = document.getElementById('videoInput');
+        const videoPlayer = document.getElementById('videoPlayer');
+
+        videoInput.addEventListener('change', function() {
+            const file = this.files[0];
+            if (file) {
+                const url = URL.createObjectURL(file);
+                videoPlayer.src = url;
+                videoPlayer.play();
+            }
+        });
+    </script>
+    <!--audio player with controls-->
+    <h2>Audio Player</h2>
+    <label for="audioInput">Upload Audio:</label>
+    <input type="file" id="audioInput" accept="audio/*" title="Select an audio file" placeholder="Choose audio">
+    <audio id="audioPlayer" controls></audio>
+    <script>
+        const audioInput = document.getElementById('audioInput');
+        const audioPlayer = document.getElementById('audioPlayer');
+
+        audioInput.addEventListener('change', function() {
+            const file = this.files[0];
+            if (file) {
+                const url = URL.createObjectURL(file);
+                audioPlayer.src = url;
+                audioPlayer.play();
+            }
+        });
+    </script>
+    <!--interactive elements-->
+    <!--collapsible FAQ section using details and summary-->
+    <!--dark mode toggle using checkbox-->
+    <!--tooltip-->
+    <button title="This is a tooltip">Hover over me</button>
+    <h2>Frequently Asked Questions</h2>
+    <details>
+        <summary>What services do you offer?</summary>
+        <p>We offer custom software development, mobile app development, web development, and cloud solutions.</p>
+    </details>
+    <details>
+        <summary>How long does a typical project take?</summary>
+        <p>The duration of a project depends on its complexity and scope. We work closely with our clients to provide accurate timelines.</p>
+    </details>
+    <details>
+        <summary>Do you offer maintenance and support services?</summary>
+        <p>Yes, we provide ongoing maintenance and support to ensure your software continues to perform optimally.</p>
+    </details>
+    <h2>Dark Mode Toggle</h2>
+    <label for="darkModeToggle">Dark Mode:</label>
+    <input type="checkbox" id="darkModeToggle" title="Toggle dark mode" placeholder="Toggle dark mode">
+    <script>
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        darkModeToggle.addEventListener('change', function() {
+            if (this.checked) {
+                document.body.classList.add('dark-mode');
+            } else {
+                document.body.classList.remove('dark-mode');
+            }
+        });
+    </script>
+    
+    </header>
+    <!--accessibility and seo-->
+    <!--images with alt text-->
+    <!--proper &lt;meta&gt; description,keyboards,author-->
+    <!--arial labels role-->
+    <!--clear semantic h1, h2, h3-->
+    <section id="accessibility">
+        <h2>Accessibility & SEO</h2>
+        <p>We prioritize accessibility and SEO best practices to ensure our content is easily discoverable and usable by all users.</p>
+        <img src="https://example.com/image.jpg" alt="Description of the image for accessibility">
+        <meta name="description" content="OLATECH is a leading software development company that specializes in creating innovative solutions for businesses of all sizes.">
+        <meta name="keywords" content="software development, custom software, mobile app development, web development, cloud solutions">
+        <meta name="author" content="OLATECH Team">
+        <!-- Example of ARIA labels for accessibility -->
+        <button aria-label="Close" title="Close">X</button>
+        <button aria-label="Submit" title="Submit">Submit</button>
+        <!-- Clear semantic structure with headings -->
+        <h1>Welcome to OLATECH</h1>
+        <h2>Our Services</h2>
+        <h3>Custom Software Development</h3>
+    </section>
+    <footer>
+        <nav>
+            <h1>OLATECH</h1>
+            <i class="utf-8 emoji">💻</i> <a href="#home">Home</a>
+            <i class="utf-8 emoji">👤</i> <a href="#about">About</a>
+            <i class="utf-8 emoji">💼</i> <a href="#projects">Projects</a>
+            <i class="utf-8 emoji">📧</i> <a href="#contact">Contact</a>
+        </nav>
+        <p>&copy; 2024 OLATECH. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
